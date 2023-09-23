@@ -1,8 +1,7 @@
-name: 📝 Checking PR
+name: 🚀 Deploy
 
 on:
   push:
-  pull_request:
     branches:
       - main
 
