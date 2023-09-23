@@ -1,0 +1,29 @@
+name: Run tests
+
+on:
+  push:
+  pull_request:
+    branches:
+      -main
+
+jobs:
+  build:
+    name: 🚀 Build Project
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Download deps
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8
+          run_install: true
+      
+      - name: 🚀 Build
+        run: pnpm build
