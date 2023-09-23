@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: 🚀 Build Project
+    name: 🚀 Astro Build 
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout repo
@@ -25,5 +25,49 @@ jobs:
           version: 8
           run_install: true
       
-      - name: 🚀 Build
+      - name: 🚀 Astro Build
         run: pnpm build
+        
+  lint:
+    name: ⬣ Biome
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Download deps
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8
+          run_install: true
+
+      - name: 🔬 Lint
+        run: pnpm lint
+      
+  check:
+    name: 🔎 Astro check
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Download deps
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8
+          run_install: true
+
+      - name: 🔎 Check
+        run: pnpm check
+
+
