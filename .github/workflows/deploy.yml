@@ -1,0 +1,70 @@
+name: 🚀 Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: 👨‍🚀 Astro Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Download deps
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8
+          run_install: true
+
+      - name: 👨‍🚀 Astro Build
+        run: pnpm build
+
+  lint:
+    name: 🔬 Biome Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Download deps
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8
+          run_install: true
+
+      - name: 🔬 Biome Lint
+        run: pnpm lint
+
+  check:
+    name: 🔎 Astro Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Download deps
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8
+          run_install: true
+
+      - name: 🔎 Astro Check
+        run: pnpm check
