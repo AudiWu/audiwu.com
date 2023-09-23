@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -13,6 +12,7 @@
     "format --write": "biome format --write ./src"
   },
   "dependencies": {
+    "@astrojs/node": "^6.0.1",
     "@astrojs/react": "^3.0.2",
     "@astrojs/tailwind": "^5.0.0",
     "@radix-ui/react-slot": "^1.0.2",

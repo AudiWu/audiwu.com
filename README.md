@@ -45,3 +45,35 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Run using Docker
+
+1. Build container
+
+```
+docker build -t <your-astro-image-name> .
+```
+
+Ex:
+
+```
+docker build -t audiwu.com .
+```
+
+2. Run docker image
+
+```
+docker run -p <local-port>:<container-port> <your-astro-image-name>
+```
+
+Ex:
+
+```
+docker run -p 4321:4321 audiwu.com
+```
+
+3. Stop docker image run
+
+```
+docker stop <container-id>
+```
