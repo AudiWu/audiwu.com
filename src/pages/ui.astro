@@ -1,0 +1,35 @@
+---
+import "@/styles/globals.css";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Hover } from "@/components/Demo/Hover";
+import { Dropdown } from "@/components/Demo/Dropdown";
+import { SwitchDemo } from "@/components/Demo/Switch";
+import { TabsDemo } from "@/components/Demo/Tab";
+---
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div
+      class="w-screen h-screen flex flex-col gap-2 justify-center items-center"
+    >
+      <Button>Button1</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="destructive">Desctructive</Button>
+      <label form="name">Audi</label>
+      <Input id="label" className="w-30" type="text" aria-label="Input" />
+      <Hover client:load />
+      <Dropdown client:load />
+      <SwitchDemo client:load />
+      <TabsDemo client:load />
+    </div>
+  </body>
+</html>
