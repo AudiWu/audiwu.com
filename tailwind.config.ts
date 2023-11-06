@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   darkMode: ["class"],
@@ -15,6 +16,9 @@ export default {
       screens: {
         "2xl": "1400px",
       },
+    },
+    fontFamily: {
+      sans: ["Montserrat Variable", ...defaultTheme.fontFamily.sans],
     },
     extend: {
       colors: {
@@ -73,5 +77,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
