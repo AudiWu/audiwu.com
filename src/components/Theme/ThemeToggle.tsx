@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { Moon, Sun, Laptop } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
@@ -7,10 +5,12 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Laptop, Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
 
-type Theme = "light" | "dark" | "system";
+export type Theme = "light" | "dark" | "system";
 
-const getTheme = () => {
+export const getTheme = (): Theme => {
 	const localStorageTheme = window.localStorage.getItem("theme");
 	const theme = localStorageTheme ?? "light";
 
@@ -18,11 +18,11 @@ const getTheme = () => {
 		window.localStorage.setItem("theme", theme);
 	}
 
-	return theme;
+	return theme as Theme;
 };
 
 export const ThemeToggle = () => {
-	const [theme, setThemeState] = useState<string>();
+	const [theme, setThemeState] = useState<Theme>();
 
 	const themeIcon = {
 		light: <Sun />,

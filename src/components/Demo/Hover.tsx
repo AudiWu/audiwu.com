@@ -1,7 +1,7 @@
 import {
 	HoverCard,
-	HoverCardTrigger,
 	HoverCardContent,
+	HoverCardTrigger,
 } from "@/components/ui/hover-card";
 
 export const Hover = () => (
@@ -12,4 +12,3 @@ export const Hover = () => (
 		</HoverCardContent>
 	</HoverCard>
 );
-

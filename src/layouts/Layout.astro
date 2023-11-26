@@ -1,6 +1,6 @@
 ---
 import "@/styles/globals.css";
-import Navbar from "@/components/Navbar/index.astro";
+import { Navbar } from "@/components/Navigation/Navbar";
 ---
 
 <html lang="en">
@@ -15,7 +15,7 @@ import Navbar from "@/components/Navbar/index.astro";
     <title>Audi P.M</title>
   </head>
   <body>
-    <Navbar />
+    <Navbar client:only="react" />
     <main>
       <slot />
     </main>
