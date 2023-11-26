@@ -82,4 +82,8 @@
     --input: 236 9% 69%;
     --ring: 28 100% 97%;
   }
+
+  body {
+    overscroll-behavior: none;
+  }
 }

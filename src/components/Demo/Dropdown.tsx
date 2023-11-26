@@ -1,10 +1,10 @@
 import {
 	DropdownMenu,
-	DropdownMenuTrigger,
 	DropdownMenuContent,
+	DropdownMenuItem,
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
-	DropdownMenuItem,
+	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
 export const Dropdown = () => (
