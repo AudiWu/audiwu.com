@@ -5,10 +5,10 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Laptop, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
-export type Theme = "light" | "dark" | "system";
+export type Theme = "light" | "dark";
 
 export const getTheme = (): Theme => {
 	const localStorageTheme = window.localStorage.getItem("theme");
@@ -27,7 +27,6 @@ export const ThemeToggle = () => {
 	const themeIcon = {
 		light: <Sun />,
 		dark: <Moon />,
-		system: <Laptop />,
 	};
 
 	const changeTheme = (theme: Theme) => {
@@ -40,10 +39,7 @@ export const ThemeToggle = () => {
 	}, []);
 
 	useEffect(() => {
-		const isSystemThemeDark =
-			theme === "system" &&
-			window.matchMedia("(prefers-color-scheme: dark)").matches;
-		const isDark = theme === "dark" || isSystemThemeDark;
+		const isDark = theme === "dark";
 
 		document.documentElement.classList[isDark ? "add" : "remove"]("dark");
 	}, [theme]);
@@ -62,9 +58,6 @@ export const ThemeToggle = () => {
 				</DropdownMenuItem>
 				<DropdownMenuItem onClick={() => changeTheme("dark")}>
 					Dark
-				</DropdownMenuItem>
-				<DropdownMenuItem onClick={() => changeTheme("system")}>
-					System
 				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>
