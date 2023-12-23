@@ -49,21 +49,10 @@ export const Navbar = () => {
 
   return (
     <div className="w-full relative">
-      <nav className="flex flex-row justify-between px-4 border-b-2">
-        <h1 className="flex justify-center items-center py-4 pr-4 border-r-2">
+      <nav className="flex flex-row justify-between px-4">
+        <h1 className="flex justify-center items-center py-4 pr-4">
           Audi P.M
         </h1>
-        <div className="flex flex-row gap-2">
-          <a href="/ui" data-astro-prefetch="hover">
-            ui
-          </a>
-          <a href="/fonts-page" data-astro-prefetch="hover">
-            fonts
-          </a>
-          <a href="/" data-astro-prefetch="hover">
-            home
-          </a>
-        </div>
         <div className="flex flex-row justify-center items-center gap-2">
           <ThemeToggle />
           <Button
