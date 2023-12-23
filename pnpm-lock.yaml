@@ -40,7 +40,7 @@ dependencies:
     version: 1.0.4(@types/react-dom@18.2.17)(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
   '@react-three/fiber':
     specifier: ^8.15.12
-    version: 8.15.12(react-dom@18.2.0)(react@18.2.0)(three@0.159.0)
+    version: 8.15.12(react-dom@18.2.0)(react@18.2.0)(three@0.160.0)
   astro:
     specifier: ^4.0.3
     version: 4.0.3(@types/node@20.10.4)(typescript@5.3.3)
@@ -72,8 +72,8 @@ dependencies:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.3.6)
   three:
-    specifier: ^0.159.0
-    version: 0.159.0
+    specifier: ^0.160.0
+    version: 0.160.0
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -98,8 +98,8 @@ devDependencies:
     specifier: ^18.2.17
     version: 18.2.17
   '@types/three':
-    specifier: ^0.159.0
-    version: 0.159.0
+    specifier: ^0.160.0
+    version: 0.160.0
 
 packages:
 
@@ -1467,7 +1467,7 @@ packages:
       '@babel/runtime': 7.23.5
     dev: false
 
-  /@react-three/fiber@8.15.12(react-dom@18.2.0)(react@18.2.0)(three@0.159.0):
+  /@react-three/fiber@8.15.12(react-dom@18.2.0)(react@18.2.0)(three@0.160.0):
     resolution: {integrity: sha512-yg0CyXVHIdSbNjM/GAgDrGJnKLTsfTlaR5FoJGEh9IgVKptOoudnFZhBt/Cau4rzx2X6eLmB1+aWOm1dEHSUpg==}
     peerDependencies:
       expo: '>=43.0'
@@ -1504,7 +1504,7 @@ packages:
       react-use-measure: 2.1.1(react-dom@18.2.0)(react@18.2.0)
       scheduler: 0.21.0
       suspend-react: 0.1.3(react@18.2.0)
-      three: 0.159.0
+      three: 0.160.0
       zustand: 3.7.2(react@18.2.0)
     dev: false
 
@@ -1726,8 +1726,8 @@ packages:
     resolution: {integrity: sha512-pXNfAD3KHOdif9EQXZ9deK82HVNaXP5ZIF5RP2QG6OQFNTaY2YIetfrE9t528vEreGQvEPRDDc8muaoYeK0SxQ==}
     dev: true
 
-  /@types/three@0.159.0:
-    resolution: {integrity: sha512-2gybdh7HtX+rGUgslzK7QEJfzD2I0qrbUGzKk+dK0FDx49UHkNX0rqZVRzIgeFjBd1HzzhNNgwNoMacm3Wyc7w==}
+  /@types/three@0.160.0:
+    resolution: {integrity: sha512-jWlbUBovicUKaOYxzgkLlhkiEQJkhCVvg4W2IYD2trqD2om3VK4DGLpHH5zQHNr7RweZK/5re/4IVhbhvxbV9w==}
     dependencies:
       '@types/stats.js': 0.17.3
       '@types/webxr': 0.5.10
@@ -4746,8 +4746,8 @@ packages:
     dependencies:
       any-promise: 1.3.0
 
-  /three@0.159.0:
-    resolution: {integrity: sha512-eCmhlLGbBgucuo4VEA9IO3Qpc7dh8Bd4VKzr7WfW4+8hMcIfoAVi1ev0pJYN9PTTsCslbcKgBwr2wNZ1EvLInA==}
+  /three@0.160.0:
+    resolution: {integrity: sha512-DLU8lc0zNIPkM7rH5/e1Ks1Z8tWCGRq6g8mPowdDJpw1CFBJMU7UoJjC6PefXW7z//SSl0b2+GCw14LB+uDhng==}
     dev: false
 
   /to-fast-properties@2.0.0:
