@@ -18,7 +18,7 @@ export const navItems: NavItem[] = [
 	{
 		id: 3,
 		value: "Projects",
-		href: "/project",
+		href: "/projects",
 	},
 	{
 		id: 4,
