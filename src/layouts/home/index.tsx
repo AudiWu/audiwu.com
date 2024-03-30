@@ -12,7 +12,7 @@ export const Home = () => {
         <Suspense fallback={null}>
           <ScrollControls pages={1}>
             <Scroll>
-              <M　odel />
+              <Model />
             </Scroll>
             <Scroll html style={{ width: "100%", height: "100vh" }}>
               <section className="h-[calc(100vh_-_104px)] flex flex-col justify-start sm:justify-center p-12">
