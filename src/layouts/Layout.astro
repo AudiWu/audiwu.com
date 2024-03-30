@@ -1,6 +1,6 @@
 ---
 import "@/styles/globals.css";
-import { Navbar } from "@/components/navigation/NavBar.tsx";
+import { NavBar } from "@/components/navigation/NavBar";
 ---
 
 <script is:inline>
@@ -42,7 +42,7 @@ import { Navbar } from "@/components/navigation/NavBar.tsx";
     <title>Audi P.M</title>
   </head>
   <body>
-    <Navbar client:load />
+    <NavBar client:load />
     <main>
       <slot />
     </main>
