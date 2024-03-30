@@ -37,6 +37,5 @@ export const Home = () => {
         </Suspense>
       </Canvas>
     </div>
-    // </div>
   );
 };
