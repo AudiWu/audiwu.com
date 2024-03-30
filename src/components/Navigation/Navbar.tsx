@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { ThemeToggle } from "../theme/themeToggle";
 import { Button } from "../ui/button";
-import { NavItem } from "./navItem";
+import { NavItem } from "./NavItem.tsx";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
