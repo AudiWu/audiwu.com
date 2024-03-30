@@ -33,7 +33,7 @@ export const Model = ({ position }: ModelProps) => {
     rZ: 3,
   });
 
-  useFrame((state) => {
+  useFrame(() => {
     const offset = 1 - scroll.offset;
     ref.current.rotation.y += 0.001;
 
