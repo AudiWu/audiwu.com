@@ -5,8 +5,8 @@ import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
 import { gsap } from "gsap";
 import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
-import { ThemeToggle } from "../theme/themeToggle";
-import { Button } from "../ui/button";
+import { ThemeToggle } from "../theme/themeToggle.tsx";
+import { Button } from "../ui/button.tsx";
 import { NavItem } from "./NavItem.tsx";
 
 export const Navbar = () => {
