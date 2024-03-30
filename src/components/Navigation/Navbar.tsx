@@ -5,9 +5,9 @@ import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
 import { gsap } from "gsap";
 import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
-import { ThemeToggle } from "../Theme/ThemeToggle";
+import { ThemeToggle } from "../theme/themeToggle";
 import { Button } from "../ui/button";
-import { NavItem } from "./NavItem";
+import { NavItem } from "./navItem";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -49,9 +49,9 @@ export const Navbar = () => {
 
   return (
     <div className="w-full relative">
-      <nav className="flex flex-row justify-between px-4">
-        <h1 className="flex justify-center items-center py-4 pr-4">
-          Audi P.M
+      <nav className="flex flex-row justify-between p-8">
+        <h1 className="flex justify-center items-center text-xl font-bold sm:text-3xl">
+          AUDI P.M.
         </h1>
         <div className="flex flex-row justify-center items-center gap-2">
           <ThemeToggle />
@@ -67,7 +67,7 @@ export const Navbar = () => {
       </nav>
       <div
         ref={menuRef}
-        className="hidden w-full absolute top-[58px] z-50 bg-primary-foreground py-4"
+        className="hidden w-full absolute top-[104px] z-50 bg-primary-foreground"
       >
         <ul className="flex flex-col gap-10 justify-center self-center">
           {navItems.map((item, index) => (
