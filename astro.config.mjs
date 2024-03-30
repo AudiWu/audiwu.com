@@ -3,7 +3,7 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
-// import path from "path";
+import path from "node:path";
 
 // https://astro.build/config
 export default defineConfig({
