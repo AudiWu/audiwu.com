@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { ThemeToggle } from "../theme/themeToggle.tsx";
 import { Button } from "../ui/button.tsx";
-import { NavItem } from "./navItem.tsx";
+import { NavigationItem } from "./item.tsx";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -71,7 +71,7 @@ export const Navigation = () => {
       >
         <ul className="flex flex-col gap-10 justify-center self-center">
           {navItems.map((item, index) => (
-            <NavItem
+            <NavigationItem
               key={item.id}
               index={index}
               href={item.href}

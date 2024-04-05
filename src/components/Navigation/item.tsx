@@ -4,7 +4,7 @@ import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
-type NavItemProps = {
+type NavigationItemProps = {
 	value: string;
 	index: number;
 	href: string;
@@ -12,13 +12,13 @@ type NavItemProps = {
 	timeline: gsap.core.Timeline;
 };
 
-export const NavItem = ({
+export const NavigationItem = ({
 	value,
 	index,
 	href,
 	isLastItem,
 	timeline,
-}: NavItemProps) => {
+}: NavigationItemProps) => {
 	const ref = useRef<HTMLLIElement>(null);
 	const underlineRef = useRef<HTMLSpanElement>(null);
 	const { setIsPlay } = useAnimationState();
