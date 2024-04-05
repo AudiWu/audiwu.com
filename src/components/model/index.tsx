@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Mesh } from "three";
+import type { Mesh } from "three";
 import { useGLTF, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
