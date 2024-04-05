@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "astro check",
+    "check": "astro sync & astro check",
     "lint": "biome check --apply ./src",
     "format": "biome format ./src",
     "format --write": "biome format --write ./src"

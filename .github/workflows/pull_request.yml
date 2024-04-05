@@ -68,5 +68,4 @@ jobs:
 
       - name: 🔎 Astro Check
         run: 
-          pnpm astro sync 
           pnpm check
