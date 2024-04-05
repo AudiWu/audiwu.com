@@ -1,9 +1,8 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
-import path from "node:path";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,14 +15,5 @@ export default defineConfig({
     sitemap(),
   ],
   output: "server",
-  adapter: node({
-    mode: "standalone",
-  }),
-  vite: {
-    resolve: {
-      alias: {
-        "@": "/src",
-      },
-    },
-  },
+  adapter: vercel(),
 });
