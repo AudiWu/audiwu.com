@@ -1,10 +1,10 @@
 ---
-import Layout from "@/layouts/layout.astro";
+import Page from "@/layouts/page.astro";
 
 const exampleSentence = "The quick brown fox jumps over the lazy dog.";
 ---
 
-<Layout>
+<Page>
   <div class="flex flex-col gap-3 p-4">
     <h1 class="font-black">Black 900</h1>
     <p class="font-black text-5xl">{exampleSentence}</p>
@@ -33,4 +33,4 @@ const exampleSentence = "The quick brown fox jumps over the lazy dog.";
     <h1 class="font-black">Thin 100</h1>
     <p class="font-thin text-5xl">{exampleSentence}</p>
   </div>
-</Layout>
+</Page>
