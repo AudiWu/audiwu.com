@@ -1,6 +1,6 @@
 ---
 import "@/styles/globals.css";
-import { NavBar } from "../components/navigation/navbar";
+import { Navigation } from "@/components/navigation";
 ---
 
 <script is:inline>
@@ -42,7 +42,7 @@ import { NavBar } from "../components/navigation/navbar";
     <title>Audi P.M</title>
   </head>
   <body>
-    <NavBar client:load />
+    <Navigation client:load />
     <main>
       <slot />
     </main>
