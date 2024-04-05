@@ -67,7 +67,6 @@ jobs:
           run_install: true
 
       - name: 🔎 Astro Check
-        run:
-          pnpm astro sync 
+        run: 
           pnpm check
 
