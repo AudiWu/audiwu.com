@@ -49,7 +49,7 @@ jobs:
         run: pnpm lint
 
   check:
-    name: 🔎 Astro Check
+    name: 🔎 Biome Check
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout repo
@@ -66,5 +66,5 @@ jobs:
           version: 8
           run_install: true
 
-      - name: 🔎 Astro Check
+      - name: 🔎 Biome Check
         run: pnpm check

@@ -7,13 +7,11 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "astro sync & astro check",
-    "lint": "biome check --apply ./src",
-    "format": "biome format ./src",
-    "format --write": "biome format --write ./src"
+    "lint": "biome lint ./src",
+		"check": "biome check --apply ./src",
+    "format": "biome format --write ./src"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.10",
     "@astrojs/node": "^7.0.4",
     "@astrojs/react": "^3.1.1",
     "@astrojs/sitemap": "^3.1.2",

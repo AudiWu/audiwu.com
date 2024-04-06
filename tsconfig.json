@@ -5,8 +5,9 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "jsx": "preserve",
-    "jsxImportSource": "react"
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "strictNullChecks": true
   },
   "exclude": ["dist"]
 }
