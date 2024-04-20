@@ -10,13 +10,13 @@ export const Home = () => {
 				<ambientLight intensity={0.1} />
 				<directionalLight color="white" position={[0, 0, 5]} />
 				<Suspense fallback={null}>
-					<ScrollControls pages={1}>
+					<ScrollControls pages={2}>
 						<Scroll>
 							<Model />
 						</Scroll>
 						<Scroll html style={{ width: "100%", height: "100vh" }}>
-							<section className="h-[calc(100vh_-_104px)] flex flex-col justify-start sm:justify-center p-12">
-								<div className="">
+							<section className="h-[calc(100vh_-_104px)] flex flex-col justify-start sm:justify-center px-12 py-0">
+								<div>
 									<h1 className="text-m sm:text-2xl font-normal mb-4">
 										Hi, my name is
 									</h1>
@@ -30,6 +30,11 @@ export const Home = () => {
 										I'm a web developer that enjoys creating things that live on
 										the internet.
 									</h1>
+								</div>
+							</section>
+							<section className="h-screen flex flex-col justify-start sm:justify-center px-12 py-8">
+								<div>
+									<h1>Section 2</h1>
 								</div>
 							</section>
 						</Scroll>
