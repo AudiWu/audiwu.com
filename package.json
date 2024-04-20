@@ -12,7 +12,7 @@
     "format": "biome format --write ./src"
   },
   "dependencies": {
-    "@astrojs/node": "^7.0.4",
+    "@astrojs/node": "^8.0.0",
     "@astrojs/react": "^3.1.1",
     "@astrojs/sitemap": "^3.1.2",
     "@astrojs/tailwind": "^5.1.0",
