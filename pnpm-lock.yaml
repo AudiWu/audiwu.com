@@ -89,7 +89,7 @@ importers:
         version: 1.9.4
       '@tailwindcss/typography':
         specifier: ^0.5.12
-        version: 0.5.12(tailwindcss@3.4.3)
+        version: 0.5.16(tailwindcss@3.4.3)
       '@types/node':
         specifier: ^20.12.4
         version: 20.12.4
@@ -1126,10 +1126,10 @@ packages:
   '@shikijs/core@1.2.4':
     resolution: {integrity: sha512-ClaUWpt8oTzjcF0MM1P81AeWyzc1sNSJlAjMG80CbwqbFqXSNz+NpQVUC0icobt3sZn43Sn27M4pHD/Jmp3zHw==}
 
-  '@tailwindcss/typography@0.5.12':
-    resolution: {integrity: sha512-CNwpBpconcP7ppxmuq3qvaCxiRWnbhANpY/ruH4L5qs2GCiVDJXde/pjj2HWPV1+Q4G9+V/etrwUYopdcjAlyg==}
+  '@tailwindcss/typography@0.5.16':
+    resolution: {integrity: sha512-0wDLwCVF5V3x3b1SGXPCDcdsbDHMBe+lkFzBRaHeLvNi+nrrnZ1lA18u+OTWO8iSWU2GxUOCvlXtDuqftc1oiA==}
     peerDependencies:
-      tailwindcss: '>=3.0.0 || insiders'
+      tailwindcss: '>=3.0.0 || insiders || >=4.0.0-alpha.20 || >=4.0.0-beta.1'
 
   '@tweenjs/tween.js@23.1.1':
     resolution: {integrity: sha512-ZpboH7pCPPeyBWKf8c7TJswtCEQObFo3bOBYalm99NzZarATALYCo5OhbCa/n4RQyJyHfhkdx+hNrdL5ByFYDw==}
@@ -4060,7 +4060,7 @@ snapshots:
 
   '@shikijs/core@1.2.4': {}
 
-  '@tailwindcss/typography@0.5.12(tailwindcss@3.4.3)':
+  '@tailwindcss/typography@0.5.16(tailwindcss@3.4.3)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
