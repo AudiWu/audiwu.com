@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 export const Home = () => {
 	return (
-		<div className="w-full h-screen fixed">
+		<div className="w-full h-screen fixed top-0">
 			<Canvas>
 				<ambientLight intensity={0.1} />
 				<directionalLight color="white" position={[0, 0, 5]} />
@@ -15,7 +15,7 @@ export const Home = () => {
 							<Model />
 						</Scroll>
 						<Scroll html style={{ width: "100%", height: "100vh" }}>
-							<section className="h-[calc(100vh_-_104px)] flex flex-col justify-start sm:justify-center px-12 py-0">
+							<section className="h-screen flex flex-col justify-start sm:justify-center px-12 py-0">
 								<div>
 									<h1 className="text-m sm:text-2xl font-normal mb-4">
 										Hi, my name is
