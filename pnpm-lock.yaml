@@ -57,8 +57,8 @@ importers:
         specifier: ^3.12.7
         version: 3.12.7
       lucide-react:
-        specifier: ^0.372.0
-        version: 0.372.0(react@18.3.1)
+        specifier: ^0.485.0
+        version: 0.485.0(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -88,16 +88,16 @@ importers:
         specifier: 1.9.4
         version: 1.9.4
       '@tailwindcss/typography':
-        specifier: ^0.5.16
+        specifier: ^0.5.12
         version: 0.5.16(tailwindcss@3.4.17)
       '@types/node':
-        specifier: ^20.17.28
+        specifier: ^20.12.4
         version: 20.17.28
       '@types/react':
-        specifier: ^18.3.20
+        specifier: ^18.2.74
         version: 18.3.20
       '@types/react-dom':
-        specifier: ^18.3.5
+        specifier: ^18.2.24
         version: 18.3.5(@types/react@18.3.20)
       '@types/three':
         specifier: ^0.159.0
@@ -1832,10 +1832,10 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-react@0.372.0:
-    resolution: {integrity: sha512-0cKdqmilHXWUwWAWnf6CrrjHD8YaqPMtLrmEHXolZusNTr9epULCsiJwIOHk2q1yFxdEwd96D4zShlAj67UJdA==}
+  lucide-react@0.485.0:
+    resolution: {integrity: sha512-NvyQJ0LKyyCxL23nPKESlr/jmz8r7fJO1bkuptSNYSy0s8VVj4ojhX0YAgmE1e0ewfxUZjIlZpvH+otfTnla8Q==}
     peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   maath@0.10.8:
     resolution: {integrity: sha512-tRvbDF0Pgqz+9XUa4jjfgAQ8/aPKmQdWXilFu2tMy4GWj4NOsx99HlULO4IeREfbO3a0sA145DZYyvXPkybm0g==}
@@ -4640,7 +4640,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@0.372.0(react@18.3.1):
+  lucide-react@0.485.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
