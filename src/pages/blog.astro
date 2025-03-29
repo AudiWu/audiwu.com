@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import Page from "@/layouts/page.astro";
+import { Button } from "@/components/ui/button";
+
+const blogs = await getCollection("blogs");
+---
+
+<Page>
+  <div class="w-full flex justify-center items-center">
+    <ul class="list-disc">
+      {
+        blogs?.map((blog) => (
+          <li>
+            <Button variant="link">
+              <a href={`/blog/${blog.id}`}>{blog.data.title}</a>
+            </Button>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Page>

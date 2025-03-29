@@ -48,7 +48,7 @@ export const Navigation = () => {
 	};
 
 	return (
-		<div className="w-full relative">
+		<div className="w-full relative z-50">
 			<nav className="flex flex-row justify-between p-8">
 				<h1 className="flex justify-center items-center text-xl font-bold sm:text-3xl">
 					AUDI P.M.
