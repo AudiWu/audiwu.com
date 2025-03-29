@@ -3,8 +3,9 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
-
 import mdx from "@astrojs/mdx";
+
+import { remarkReadingTime } from "./remark-reading-time.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,13 +15,11 @@ export default defineConfig({
     shikiConfig: {
       theme: 'dracula'
     },
-    gfm: true,
+    remarkPlugins: [remarkReadingTime],
   },
   integrations: [react(), tailwind({
     applyBaseStyles: false,
-  }), sitemap(), mdx({
-    gfm: false
-  })],
+  }), sitemap(), mdx()],
   output: "server",
   adapter: node({
     mode: "standalone",

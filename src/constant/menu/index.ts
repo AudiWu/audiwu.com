@@ -22,7 +22,7 @@ export const navItems: NavItem[] = [
 	},
 	{
 		id: 4,
-		value: "Writing",
-		href: "/writing",
+		value: "Blog",
+		href: "/blog",
 	},
 ];
