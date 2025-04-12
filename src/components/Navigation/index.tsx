@@ -9,7 +9,7 @@ import { NavigationItem } from "../navigationItem/index.tsx";
 import { ThemeToggle } from "../theme/themeToggle.tsx";
 import { Button } from "../ui/button.tsx";
 
-export const Navigation = () => {
+const Navigation = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const [timeline, _] = useState(gsap.timeline({ paused: true, delay: 0.3 }));
 	const { isPlay, setIsPlay } = useAnimationState();
@@ -85,3 +85,5 @@ export const Navigation = () => {
 		</div>
 	);
 };
+
+export default Navigation;
