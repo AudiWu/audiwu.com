@@ -1,5 +1,9 @@
 export const Footer = () => {
-  const year = new Date().getFullYear();
+	const year = new Date().getFullYear();
 
-  return <footer className="px-8 py-2 md:py-4 w-full flex justify-center absolute bottom-0 text-center">All rights reserved © Audi P.M. {year}</footer>;
+	return (
+		<footer className="px-8 py-2 md:py-4 w-full flex justify-center absolute bottom-0 text-center">
+			All rights reserved © Audi P.M. {year}
+		</footer>
+	);
 };

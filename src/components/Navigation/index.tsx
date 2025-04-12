@@ -5,9 +5,9 @@ import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
 import { gsap } from "gsap";
 import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
+import { NavigationItem } from "../navigationItem/index.tsx";
 import { ThemeToggle } from "../theme/themeToggle.tsx";
 import { Button } from "../ui/button.tsx";
-import { NavigationItem } from "./item.tsx";
 
 export const Navigation = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -48,7 +48,7 @@ export const Navigation = () => {
 	};
 
 	return (
-		<div className="w-full relative">
+		<div className="w-full relative z-50">
 			<nav className="flex flex-row justify-between p-8">
 				<h1 className="flex justify-center items-center text-xl font-bold sm:text-3xl">
 					AUDI P.M.
