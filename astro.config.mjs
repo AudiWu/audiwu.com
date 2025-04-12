@@ -32,7 +32,7 @@ export default defineConfig({
 	vite: {
 		resolve: {
 			alias: {
-				"@": path.resolve(path.dirname(""), "./src"),
+				"@": path.resolve("./src"),
 			},
 		},
 	},

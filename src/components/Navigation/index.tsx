@@ -1,13 +1,18 @@
+import { useRef, useState } from "react";
+import { Menu, X } from "lucide-react";
+import { gsap } from "gsap";
+
+import { NavigationItem } from "@/components/navigationItem";
+import { ThemeToggle } from "@/components/theme/themeToggle.tsx";
+import { Button } from "@/components/ui/button";
+
 import { NavAnimation } from "@/constant/animation/navigation";
 import { navItems } from "@/constant/menu";
+
 import { useAnimationState } from "@/store/animation";
+
 import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
-import { gsap } from "gsap";
-import { Menu, X } from "lucide-react";
-import { useRef, useState } from "react";
-import { NavigationItem } from "../navigationItem/index.tsx";
-import { ThemeToggle } from "../theme/themeToggle.tsx";
-import { Button } from "../ui/button.tsx";
+
 
 export const Navigation = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
