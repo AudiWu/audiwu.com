@@ -1,4 +1,4 @@
-import { NavAnimation } from "@/constant/animation/navigation";
+import { NAV_ANIMATION } from "@/constant/animation/navigation";
 import { navItems } from "@/constant/menu";
 import { useAnimationState } from "@/store/animation";
 import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
@@ -23,14 +23,14 @@ export const Navigation = () => {
 			gsap.fromTo(
 				menuRef.current,
 				{
-					...NavAnimation.Navbar.expandAnimationStart,
+					...NAV_ANIMATION.NAVBAR.expandAnimationStart,
 					onComplete: () => {
 						setIsPlay(true);
 						document.body.style.overflow = "hidden";
 					},
 				},
 				{
-					...NavAnimation.Navbar.expandAnimationEnd,
+					...NAV_ANIMATION.NAVBAR.expandAnimationEnd,
 					onReverseComplete: () => {
 						setIsPlay(false);
 						document.body.style.overflow = "scroll";
