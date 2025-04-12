@@ -1,7 +1,6 @@
-import NavItem from "./navItem";
-import Navbar from "./navbar";
+import {NAVBAR} from "./Navbar";
 
-export const NavAnimation = {
-	Navbar: Navbar,
+export const NAV_ANIMATION = {
+	NAVBAR: NAVBAR,
 	NavItem: NavItem,
 };
