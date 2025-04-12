@@ -5,6 +5,8 @@ import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 
+import { fileURLToPath, URL } from "node:url";
+
 import { remarkReadingTime } from "./remark-reading-time.mjs";
 
 // https://astro.build/config
@@ -28,11 +30,10 @@ export default defineConfig({
     mode: "standalone",
   }),
   vite: {
-    build: {
-      rollupOptions: {
-        // When build the web on github pull request this component always show error
-        external: ["./src/components/navigation"],
-      },
-    },
+    resolve: {
+      alias: [
+        { find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
+      ]
+    }
   }
 });
