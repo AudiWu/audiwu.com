@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { NavigationItem } from "../navigationItem/index.tsx";
-import { ThemeToggle } from "../theme/themeToggle.tsx";
+import { ThemeToggle } from "../theme/ThemeToggle.tsx";
 import { Button } from "../ui/button.tsx";
 
 export const Navigation = () => {
