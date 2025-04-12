@@ -17,11 +17,14 @@ export default defineConfig({
     },
     remarkPlugins: [remarkReadingTime],
   },
-  integrations: [react(), tailwind({
-    applyBaseStyles: false,
-  }), sitemap(), mdx()],
+  integrations: [
+    react(),
+    tailwind({ applyBaseStyles: false,}),
+    sitemap(),
+    mdx()
+  ],
   output: "server",
   adapter: node({
     mode: "standalone",
-  })
+  }),
 });

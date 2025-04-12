@@ -5,9 +5,9 @@ import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
 import { gsap } from "gsap";
 import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
+import { NavigationItem } from "../navigationItem/index.tsx";
 import { ThemeToggle } from "../theme/themeToggle.tsx";
 import { Button } from "../ui/button.tsx";
-import { NavigationItem } from "../navigationItem/index.tsx";
 
 export const Navigation = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
