@@ -30,7 +30,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       // When build the web on github pull request this component always show error
-      external: ["@/components/navigation"],
+      external: ["./src/components/navigation"],
     },
   },
 });
