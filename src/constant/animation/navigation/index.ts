@@ -1,4 +1,4 @@
-import {NAVBAR} from "./Navbar";
+import { NAVBAR } from "./navbar";
 import { NAV_ITEM } from "./navItem";
 
 export const NAV_ANIMATION = {
