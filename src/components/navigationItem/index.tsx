@@ -1,4 +1,4 @@
-import { NavAnimation } from "@/constant/animation/navigation";
+import { NAV_ANIMATION } from "@/constant/animation/navigation";
 import { useAnimationState } from "@/store/animation";
 import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
 import { gsap } from "gsap";
@@ -35,9 +35,9 @@ export const NavigationItem = ({
 	useEffect(() => {
 		const animation = gsap.fromTo(
 			ref.current,
-			NavAnimation.NavItem.expandAnimationStart,
+			NAV_ANIMATION.NAV_ITEM.expandAnimationStart,
 			{
-				...NavAnimation.NavItem.expandAnimationEnd,
+				...NAV_ANIMATION.NAV_ITEM.expandAnimationEnd,
 				onComplete: () => {
 					if (isLastItem) setIsPlay(false);
 				},
@@ -48,14 +48,14 @@ export const NavigationItem = ({
 
 		underlineTimeline.fromTo(
 			underlineRef.current,
-			NavAnimation.NavItem.hoverUnderlineAnimationStartFrom,
-			NavAnimation.NavItem.hoverUnderlineAnimationStartTo,
+			NAV_ANIMATION.NAV_ITEM.hoverUnderlineAnimationStartFrom,
+			NAV_ANIMATION.NAV_ITEM.hoverUnderlineAnimationStartTo,
 		);
 		underlineTimeline.add("midway");
 		underlineTimeline.fromTo(
 			underlineRef.current,
-			NavAnimation.NavItem.hoverUnderlineAnimationEndFrom,
-			NavAnimation.NavItem.hoverUnderlineAnimationEndTo,
+			NAV_ANIMATION.NAV_ITEM.hoverUnderlineAnimationEndFrom,
+			NAV_ANIMATION.NAV_ITEM.hoverUnderlineAnimationEndTo,
 		);
 	}, [timeline, underlineTimeline, index, isLastItem, setIsPlay]); // TODO: check biomejs for react useEffect rules
 

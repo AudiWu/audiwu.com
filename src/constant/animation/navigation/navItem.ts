@@ -34,7 +34,7 @@ const hoverUnderlineAnimationEndTo: gsap.TweenVars = {
 	immediateRender: false,
 };
 
-const NavItem = {
+export const NAV_ITEM = {
 	expandAnimationStart,
 	expandAnimationEnd,
 	hoverUnderlineAnimationStartFrom,
@@ -43,4 +43,3 @@ const NavItem = {
 	hoverUnderlineAnimationEndTo,
 };
 
-export default NavItem;
