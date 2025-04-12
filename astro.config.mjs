@@ -27,4 +27,10 @@ export default defineConfig({
   adapter: node({
     mode: "standalone",
   }),
+  build: {
+    rollupOptions: {
+      // When build the web on github pull request this component always show error
+      external: ["@/components/navigation"],
+    },
+  },
 });
