@@ -1,56 +1,56 @@
-import { useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { gsap } from "gsap";
+// import { useRef, useState } from "react";
+// import { Menu, X } from "lucide-react";
+// import { gsap } from "gsap";
 
-import { NavigationItem } from "@/components/navigationItem";
-import { ThemeToggle } from "@/components/theme/themeToggle.tsx";
-import { Button } from "@/components/ui/button";
+// import { NavigationItem } from "@/components/navigationItem";
+// import { ThemeToggle } from "@/components/theme/themeToggle.tsx";
+// import { Button } from "@/components/ui/button";
 
-import { NavAnimation } from "@/constant/animation/navigation";
-import { navItems } from "@/constant/menu";
+// import { NavAnimation } from "@/constant/animation/navigation";
+// import { navItems } from "@/constant/menu";
 
-import { useAnimationState } from "@/store/animation";
+// import { useAnimationState } from "@/store/animation";
 
-import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
+// import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
 
 
 export const Navigation = () => {
-	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const [timeline, _] = useState(gsap.timeline({ paused: true, delay: 0.3 }));
-	const { isPlay, setIsPlay } = useAnimationState();
-	const menuRef = useRef<HTMLDivElement>(null);
+	// const [isOpen, setIsOpen] = useState<boolean>(false);
+	// const [timeline, _] = useState(gsap.timeline({ paused: true, delay: 0.3 }));
+	// const { isPlay, setIsPlay } = useAnimationState();
+	// const menuRef = useRef<HTMLDivElement>(null);
 
-	const onClick = () => {
-		setIsOpen(!isOpen);
+	// const onClick = () => {
+	// 	setIsOpen(!isOpen);
 
-		addAnimation(
-			timeline,
-			gsap.fromTo(
-				menuRef.current,
-				{
-					...NavAnimation.Navbar.expandAnimationStart,
-					onComplete: () => {
-						setIsPlay(true);
-						document.body.style.overflow = "hidden";
-					},
-				},
-				{
-					...NavAnimation.Navbar.expandAnimationEnd,
-					onReverseComplete: () => {
-						setIsPlay(false);
-						document.body.style.overflow = "scroll";
-					},
-				},
-			),
-			0,
-		);
+	// 	addAnimation(
+	// 		timeline,
+	// 		gsap.fromTo(
+	// 			menuRef.current,
+	// 			{
+	// 				...NavAnimation.Navbar.expandAnimationStart,
+	// 				onComplete: () => {
+	// 					setIsPlay(true);
+	// 					document.body.style.overflow = "hidden";
+	// 				},
+	// 			},
+	// 			{
+	// 				...NavAnimation.Navbar.expandAnimationEnd,
+	// 				onReverseComplete: () => {
+	// 					setIsPlay(false);
+	// 					document.body.style.overflow = "scroll";
+	// 				},
+	// 			},
+	// 		),
+	// 		0,
+	// 	);
 
-		if (!isOpen) {
-			timeline.play();
-		} else {
-			timeline.reverse(0);
-		}
-	};
+	// 	if (!isOpen) {
+	// 		timeline.play();
+	// 	} else {
+	// 		timeline.reverse(0);
+	// 	}
+	// };
 
 	return (
 		<div className="w-full relative z-50">
@@ -58,7 +58,7 @@ export const Navigation = () => {
 				<h1 className="flex justify-center items-center text-xl font-bold sm:text-3xl">
 					AUDI P.M.
 				</h1>
-				<div className="flex flex-row justify-center items-center gap-2">
+				{/* <div className="flex flex-row justify-center items-center gap-2">
 					<ThemeToggle />
 					<Button
 						variant="outline"
@@ -68,9 +68,9 @@ export const Navigation = () => {
 					>
 						{isOpen ? <X /> : <Menu />}
 					</Button>
-				</div>
+				</div> */}
 			</nav>
-			<div
+			{/* <div
 				ref={menuRef}
 				className="hidden w-full absolute top-[104px] z-50 bg-primary-foreground"
 			>
@@ -86,7 +86,7 @@ export const Navigation = () => {
 						/>
 					))}
 				</ul>
-			</div>
+			</div> */}
 		</div>
 	);
 };
