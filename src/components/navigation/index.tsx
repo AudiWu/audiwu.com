@@ -50,9 +50,9 @@ export const Navigation = () => {
 	return (
 		<div className="w-full relative z-50">
 			<nav className="flex flex-row justify-between p-8">
-				<h1 className="flex justify-center items-center text-xl font-bold sm:text-3xl">
+				<a className="flex justify-center items-center text-xl font-bold sm:text-3xl" href="/">
 					AUDI P.M.
-				</h1>
+				</a>
 				<div className="flex flex-row justify-center items-center gap-2">
 					<ThemeToggle />
 					<Button
