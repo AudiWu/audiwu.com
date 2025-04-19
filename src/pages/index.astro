@@ -1,5 +1,8 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import { Home } from "@/layouts/home";
+import Page from "@/layouts/page.astro";
 ---
 
-<Layout />
+<Page>
+    <Home client:only="react" />
+</Page>

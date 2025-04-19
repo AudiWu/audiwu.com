@@ -1,7 +1,7 @@
 ---
+import { Footer } from "@/components/footer";
+import { Navigation } from "@/components/navigation";
 import "@/styles/globals.css";
-import { Navbar } from "@/components/Navigation/Navbar";
-import { Footer } from "@/components/Footer";
 ---
 
 <script is:inline>
@@ -43,10 +43,11 @@ import { Footer } from "@/components/Footer";
     <title>Audi P.M</title>
   </head>
   <body>
-    <Navbar client:load />
+    <Navigation client:visible />
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
   <Footer />
 </html>

@@ -1,14 +1,10 @@
 ---
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Hover } from "@/components/Demo/Hover";
-import { Dropdown } from "@/components/Demo/Dropdown";
-import { SwitchDemo } from "@/components/Demo/Switch";
-import { TabsDemo } from "@/components/Demo/Tab";
-import Layout from "@/layouts/Layout.astro";
+import Page from "@/layouts/page.astro";
 ---
 
-<Layout>
+<Page>
   <div
     class="w-screen h-screen flex flex-col gap-2 justify-center items-center"
   >
@@ -17,9 +13,5 @@ import Layout from "@/layouts/Layout.astro";
     <Button variant="destructive">Desctructive</Button>
     <label form="name">Audi</label>
     <Input id="label" className="w-30" type="text" aria-label="Input" />
-    <Hover client:load />
-    <Dropdown client:load />
-    <SwitchDemo client:load />
-    <TabsDemo client:load />
   </div>
-</Layout>
+</Page>

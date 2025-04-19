@@ -1,10 +1,10 @@
-import { NavAnimation } from "@/constant/animation/navigation";
+import { NAV_ANIMATION } from "@/constant/animation/navigation";
 import { useAnimationState } from "@/store/animation";
 import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
-type NavItemProps = {
+type NavigationItemProps = {
 	value: string;
 	index: number;
 	href: string;
@@ -12,13 +12,13 @@ type NavItemProps = {
 	timeline: gsap.core.Timeline;
 };
 
-export const NavItem = ({
+export const NavigationItem = ({
 	value,
 	index,
 	href,
 	isLastItem,
 	timeline,
-}: NavItemProps) => {
+}: NavigationItemProps) => {
 	const ref = useRef<HTMLLIElement>(null);
 	const underlineRef = useRef<HTMLSpanElement>(null);
 	const { setIsPlay } = useAnimationState();
@@ -35,9 +35,9 @@ export const NavItem = ({
 	useEffect(() => {
 		const animation = gsap.fromTo(
 			ref.current,
-			NavAnimation.NavItem.expandAnimationStart,
+			NAV_ANIMATION.NAV_ITEM.expandAnimationStart,
 			{
-				...NavAnimation.NavItem.expandAnimationEnd,
+				...NAV_ANIMATION.NAV_ITEM.expandAnimationEnd,
 				onComplete: () => {
 					if (isLastItem) setIsPlay(false);
 				},
@@ -48,14 +48,14 @@ export const NavItem = ({
 
 		underlineTimeline.fromTo(
 			underlineRef.current,
-			NavAnimation.NavItem.hoverUnderlineAnimationStartFrom,
-			NavAnimation.NavItem.hoverUnderlineAnimationStartTo,
+			NAV_ANIMATION.NAV_ITEM.hoverUnderlineAnimationStartFrom,
+			NAV_ANIMATION.NAV_ITEM.hoverUnderlineAnimationStartTo,
 		);
 		underlineTimeline.add("midway");
 		underlineTimeline.fromTo(
 			underlineRef.current,
-			NavAnimation.NavItem.hoverUnderlineAnimationEndFrom,
-			NavAnimation.NavItem.hoverUnderlineAnimationEndTo,
+			NAV_ANIMATION.NAV_ITEM.hoverUnderlineAnimationEndFrom,
+			NAV_ANIMATION.NAV_ITEM.hoverUnderlineAnimationEndTo,
 		);
 	}, [timeline, underlineTimeline, index, isLastItem, setIsPlay]); // TODO: check biomejs for react useEffect rules
 

@@ -14,9 +14,7 @@ const expandAnimationEnd: gsap.TweenVars = {
 	duration: 0.5,
 };
 
-const Navbar = {
+export const NAVBAR = {
 	expandAnimationStart,
 	expandAnimationEnd,
 };
-
-export default Navbar;
