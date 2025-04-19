@@ -6,15 +6,16 @@ import { render } from "astro:content";
 import Page from "@/layouts/page.astro";
 
 export const getStaticPaths = async () => {
-	const blogs = await getCollection("blogs");
-	return blogs.map((blog) => ({ params: { slug: blog.id }, props: blog }));
+  const blogs = await getCollection("blogs");
+  return blogs.map((blog) => ({ params: { slug: blog.id }, props: blog }));
 };
 
 const blog = Astro.props as CollectionEntry<"blogs">;
-const { Content, remarkPluginFrontmatter } = await render(blog);
+const { Content } = await render(blog);
 ---
 
 <Page>
-  <p>minutes to read: {remarkPluginFrontmatter.minutesRead}</p>
-  <Content />
+  <article class="container prose dark:prose-invert xl:prose-lg 2xl:prose-2xl">
+    <Content />
+  </article>
 </Page>
