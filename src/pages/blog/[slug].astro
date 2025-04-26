@@ -1,8 +1,9 @@
 ---
 export const prerender = true;
-import { type CollectionEntry, getCollection } from "astro:content";
 
+import { type CollectionEntry, getCollection } from "astro:content";
 import { render } from "astro:content";
+
 import Page from "@/layouts/page.astro";
 
 export const getStaticPaths = async () => {
@@ -15,7 +16,9 @@ const { Content } = await render(blog);
 ---
 
 <Page>
-  <article class="container prose dark:prose-invert xl:prose-lg 2xl:prose-2xl">
+  <article
+    class="min-h-[calc(100vh-22vh)] container prose dark:prose-invert xl:prose-lg 2xl:prose-2xl"
+  >
     <Content />
   </article>
 </Page>

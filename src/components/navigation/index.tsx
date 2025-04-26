@@ -1,13 +1,17 @@
-import { NAV_ANIMATION } from "@/constant/animation/navigation";
-import { navItems } from "@/constant/menu";
-import { useAnimationState } from "@/store/animation";
-import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
-import { gsap } from "gsap";
-import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
-import { NavigationItem } from "../navigationItem/index.tsx";
-import { ThemeToggle } from "../theme/ThemeToggle.tsx";
-import { Button } from "../ui/button.tsx";
+import { Menu, X } from "lucide-react";
+import { gsap } from "gsap";
+
+import { NAV_ANIMATION } from "@/constant/animation/navigation";
+import { NAV_ITEMS } from "@/constant/menu";
+
+import { useAnimationState } from "@/store/animation";
+
+import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
+
+import { NavigationItem } from "@/components/navigationItem";
+import { ThemeToggle } from "@/components/theme/ThemeToggle.tsx";
+import { Button } from "@/components/ui/button.tsx";
 
 export const Navigation = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -50,9 +54,9 @@ export const Navigation = () => {
 	return (
 		<div className="w-full relative z-50">
 			<nav className="flex flex-row justify-between p-8">
-				<h1 className="flex justify-center items-center text-xl font-bold sm:text-3xl">
+				<a className="flex justify-center items-center text-xl font-bold sm:text-3xl" href="/">
 					AUDI P.M.
-				</h1>
+				</a>
 				<div className="flex flex-row justify-center items-center gap-2">
 					<ThemeToggle />
 					<Button
@@ -70,14 +74,14 @@ export const Navigation = () => {
 				className="hidden w-full absolute top-[104px] z-50 bg-primary-foreground"
 			>
 				<ul className="flex flex-col gap-10 justify-center self-center">
-					{navItems.map((item, index) => (
+					{NAV_ITEMS.map((item, index) => (
 						<NavigationItem
 							key={item.id}
 							index={index}
 							href={item.href}
 							value={item.value}
 							timeline={timeline}
-							isLastItem={index === navItems.length - 1}
+							isLastItem={index === NAV_ITEMS.length - 1}
 						/>
 					))}
 				</ul>

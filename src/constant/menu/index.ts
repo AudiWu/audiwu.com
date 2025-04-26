@@ -4,7 +4,7 @@ type NavItem = {
 	href: string;
 };
 
-export const navItems: NavItem[] = [
+export const NAV_ITEMS: NavItem[] = [
 	{
 		id: 1,
 		value: "About",
@@ -12,16 +12,6 @@ export const navItems: NavItem[] = [
 	},
 	{
 		id: 2,
-		value: "Photography",
-		href: "/photography",
-	},
-	{
-		id: 3,
-		value: "Projects",
-		href: "/projects",
-	},
-	{
-		id: 4,
 		value: "Blog",
 		href: "/blog",
 	},
