@@ -15,7 +15,7 @@ const blog = Astro.props as CollectionEntry<"blogs">;
 const { Content } = await render(blog);
 ---
 
-<Page>
+<Page title={`Audi P.M | ${blog.data.title}`}>
   <article
     class="min-h-[calc(100vh-22vh)] container prose dark:prose-invert xl:prose-lg 2xl:prose-2xl"
   >
