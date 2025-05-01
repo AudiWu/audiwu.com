@@ -5,8 +5,6 @@ import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 
-import path from "node:path";
-
 import { remarkReadingTime } from "./remark-reading-time.mjs";
 
 // https://astro.build/config

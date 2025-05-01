@@ -6,7 +6,7 @@ import Page from "@/layouts/page.astro";
 const blogs = await getCollection("blogs");
 ---
 
-<Page>
+<Page title="Audi P.M | Blog">
   <div class="w-full min-h-[calc(100vh-22.5vh)]">
     <ul class="w-full px-8 flex flex-col justify-items-center items-center">
       {
@@ -18,7 +18,7 @@ const blogs = await getCollection("blogs");
               </a>
               <p>{blog.data.date}</p>
             </div>
-            <p class="text-normal text-secondary font-normal">
+            <p class="text-normal text-primary font-extralight">
               {blog.data.description}
             </p>
           </li>
