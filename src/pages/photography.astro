@@ -1,0 +1,26 @@
+---
+import { CldImage } from "astro-cloudinary";
+import { getCollection } from "astro:content";
+
+import Page from "@/layouts/page.astro";
+
+const assets = await getCollection("assets");
+---
+
+<Page title="Audi P.M | Photography">
+  <div class="w-full columns-1 sm:columns-2 lg:columns-3 space-y-4 p-8">
+    {
+      assets.map((asset) => {
+        return (
+          <CldImage
+            class="w-full rounded-xl shadow"
+            src={asset.data.public_id}
+            width={asset.data.width}
+            height={asset.data.height}
+            sizes="100vw"
+          />
+        );
+      })
+    }
+  </div>
+</Page>

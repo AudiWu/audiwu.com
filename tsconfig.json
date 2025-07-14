@@ -9,6 +9,7 @@
 		},
 		"jsx": "react-jsx",
 		"jsxImportSource": "react",
-		"strictNullChecks": true
+		"strictNullChecks": true,
+		"allowJs": true
 	}
 }
