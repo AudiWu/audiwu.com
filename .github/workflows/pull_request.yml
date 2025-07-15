@@ -9,6 +9,10 @@ jobs:
   build:
     name: 👨‍🚀 Astro Build
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.PUBLIC_CLOUDINARY_CLOUD_NAME }}
+      PUBLIC_CLOUDINARY_API_KEY: ${{ secrets.PUBLIC_CLOUDINARY_API_KEY }}
+      CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
