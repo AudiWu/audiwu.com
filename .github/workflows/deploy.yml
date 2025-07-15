@@ -80,6 +80,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
+      - run: >
+          flyctl deploy --remote-only --build-secret PUBLIC_CLOUDINARY_CLOUD_NAME=${{
+          secrets.PUBLIC_CLOUDINARY_CLOUD_NAME }}  --build-secret PUBLIC_CLOUDINARY_API_KEY=${{
+          secrets.PUBLIC_CLOUDINARY_API_KEY }}  --build-secret CLOUDINARY_API_SECRET=${{
+          secrets.CLOUDINARY_API_SECRET }}
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
