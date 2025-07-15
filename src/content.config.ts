@@ -2,9 +2,9 @@ import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 import { cldAssetsLoader } from 'astro-cloudinary/loaders';
 
-const assets = defineCollection({
+const photography = defineCollection({
     loader: cldAssetsLoader({
-      folder: 'Test',
+      folder: 'photography',
       limit: 100
     })
   })
@@ -20,6 +20,6 @@ const blogs = defineCollection({
 });
 
 export const collections = {
-    assets,
 	blogs,
+    photography,
 };

@@ -15,4 +15,9 @@ export const NAV_ITEMS: NavItem[] = [
 		value: "Blog",
 		href: "/blog",
 	},
+	{
+		id: 3,
+		value: "Photography",
+		href: "/photography",
+	},
 ];
