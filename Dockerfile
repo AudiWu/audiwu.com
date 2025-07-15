@@ -17,8 +17,20 @@ FROM base AS build-deps
 RUN pnpm install --production=false
 
 FROM build-deps AS build
+
 COPY . .
-RUN pnpm build
+# 👇 Cloudinary ENV
+ARG PUBLIC_CLOUDINARY_CLOUD_NAME
+ARG PUBLIC_CLOUDINARY_API_KEY
+ENV PUBLIC_CLOUDINARY_CLOUD_NAME=$PUBLIC_CLOUDINARY_CLOUD_NAME
+ENV PUBLIC_CLOUDINARY_API_KEY=$PUBLIC_CLOUDINARY_API_KEY
+
+# Secured way to expose secret to the build 
+# https://docs.docker.com/build/building/secrets/
+RUN --mount=type=secret,id=CLOUDINARY_API_SECRET \
+  export CLOUDINARY_API_SECRET=$(cat /run/secrets/CLOUDINARY_API_SECRET) && \
+  pnpm build
+
 
 FROM base AS runtime
 COPY --from=prod-deps /app/node_modules ./node_modules
