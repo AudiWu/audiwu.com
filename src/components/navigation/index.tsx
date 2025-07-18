@@ -7,7 +7,7 @@ import { NAV_ITEMS } from "@/constant/menu";
 
 import { useAnimationState } from "@/store/animation";
 
-import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
+import { addAnimation } from "@/utils/animation";
 
 import { NavigationItem } from "@/components/navigationItem";
 import { ThemeToggle } from "@/components/theme/ThemeToggle.tsx";

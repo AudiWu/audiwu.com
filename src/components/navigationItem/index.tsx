@@ -6,7 +6,7 @@ import { NAV_ANIMATION } from "@/constant/animation/navigation";
 
 import { useAnimationState } from "@/store/animation";
 
-import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
+import { addAnimation } from "@/utils/animation";
 
 gsap.registerPlugin(useGSAP);
 
