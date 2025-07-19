@@ -10,7 +10,7 @@ import { useAnimationState } from "@/store/animation";
 import { addAnimation } from "@/utils/animation";
 
 import { NavigationItem } from "@/components/navigationItem";
-import { ThemeToggle } from "@/components/theme/ThemeToggle.tsx";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button.tsx";
 
 export const Navigation = () => {
