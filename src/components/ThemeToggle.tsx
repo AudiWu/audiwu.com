@@ -1,5 +1,4 @@
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -9,23 +8,10 @@ import {
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import { useTheme } from "@/hooks/useTheme";
+
 export function ThemeToggle() {
-	const [theme, setThemeState] = useState<"theme-light" | "dark" | "system">(
-		"theme-light",
-	);
-
-	useEffect(() => {
-		const isDarkMode = document.documentElement.classList.contains("dark");
-		setThemeState(isDarkMode ? "dark" : "theme-light");
-	}, []);
-
-	useEffect(() => {
-		const isDark =
-			theme === "dark" ||
-			(theme === "system" &&
-				window.matchMedia("(prefers-color-scheme: dark)").matches);
-		document.documentElement.classList[isDark ? "add" : "remove"]("dark");
-	}, [theme]);
+	const [_, setThemeState] = useTheme();
 
 	return (
 		<DropdownMenu>
