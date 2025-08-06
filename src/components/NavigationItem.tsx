@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import { NAV_ANIMATION } from "@/constant/animation/navigation";
+import { NAV_ANIMATION } from "@/constants/animation/navigation";
 
 import { useAnimationState } from "@/store/animation";
 

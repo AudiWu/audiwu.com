@@ -2,8 +2,8 @@ import { useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { gsap } from "gsap";
 
-import { NAV_ANIMATION } from "@/constant/animation/navigation";
-import { NAV_ITEMS } from "@/constant/menu";
+import { NAV_ANIMATION } from "@/constants/animation/navigation";
+import { NAV_ITEMS } from "@/constants/menu";
 
 import { useAnimationState } from "@/store/animation";
 
