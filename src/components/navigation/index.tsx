@@ -52,7 +52,7 @@ export const Navigation = () => {
 	};
 
 	return (
-		<div className="w-full relative z-50">
+		<header className="w-full relative z-50">
 			<nav className="flex flex-row justify-between p-8">
 				<a className="flex justify-center items-center text-xl font-bold sm:text-3xl" href="/">
 					AUDI P.M.
@@ -69,7 +69,7 @@ export const Navigation = () => {
 					</Button>
 				</div>
 			</nav>
-			<div
+			<nav
 				ref={menuRef}
 				className="hidden w-full absolute top-[104px] z-50 bg-primary-foreground"
 			>
@@ -85,7 +85,7 @@ export const Navigation = () => {
 						/>
 					))}
 				</ul>
-			</div>
-		</div>
+			</nav>
+		</header>
 	);
 };
