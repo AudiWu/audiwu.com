@@ -9,7 +9,7 @@ import { useAnimationState } from "@/store/animation";
 
 import { addAnimation } from "@/utils/animation";
 
-import { NavigationItem } from "@/components/navigationItem";
+import { NavigationItem } from "@/components/NavigationItem";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button.tsx";
 
