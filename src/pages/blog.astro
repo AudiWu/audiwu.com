@@ -1,9 +1,20 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 import Page from "@/layouts/page.astro";
 
-const blogs = await getCollection("blogs");
+const files = await getCollection("blogs");
+
+const blogs = await Promise.all(
+  files?.map(async (file) => {
+    const { remarkPluginFrontmatter } = await render(file);
+
+    return {
+      ...file,
+      readingTime: remarkPluginFrontmatter.minutesRead,
+    };
+  })
+);
 ---
 
 <Page title="Audi P.M | Blog">
@@ -11,16 +22,25 @@ const blogs = await getCollection("blogs");
     <ul class="w-full px-8 flex flex-col justify-items-center items-center">
       {
         blogs?.map((blog) => (
-          <li class="w-full md:w-2/3 pb-8 md:pb-4  last:pb-0">
+          <li class="w-full md:w-2/3 pb-8 md:pb-4 last:pb-0 flex flex-col gap-2">
             <div class="flex flex-col md:flex-row text-lg text-primary font-bold justify-between">
               <a class="hover:underline" href={`/blog/${blog.id}`}>
                 {blog.data.title}
               </a>
-              <p>{blog.data.date}</p>
+              <p class="text-secondary font-medium">
+                {blog.data.date} - {blog.readingTime}
+              </p>
             </div>
-            <p class="text-normal text-primary font-extralight">
+            <p class="truncate text-normal text-secondary text-justify font-extralight">
               {blog.data.description}
             </p>
+            <div class="w-full flex flex-row gap-2">
+              {blog.data.tags.map((tag) => (
+                <div class="w-fit rounded-2xl border-2 text-primary px-2 py-0.5 text-xs">
+                  {tag}
+                </div>
+              ))}
+            </div>
           </li>
         ))
       }

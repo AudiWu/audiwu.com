@@ -12,13 +12,19 @@ export const getStaticPaths = async () => {
 };
 
 const blog = Astro.props as CollectionEntry<"blogs">;
-const { Content } = await render(blog);
+const { Content, remarkPluginFrontmatter } = await render(blog);
 ---
 
 <Page title={`Audi P.M | ${blog.data.title}`}>
   <article
     class="min-h-[calc(100vh-22vh)] container prose dark:prose-invert xl:prose-lg 2xl:prose-2xl"
   >
+    <div class="flex flex-col gap-2 mb-8">
+      <h1 class="mb-0 xl:mb-0">{blog.data.title}</h1>
+      <p class="m-0 xl:m-0">
+        {blog.data.date} - {remarkPluginFrontmatter.minutesRead}
+      </p>
+    </div>
     <Content />
   </article>
 </Page>

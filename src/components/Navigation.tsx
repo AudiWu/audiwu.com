@@ -2,15 +2,15 @@ import { useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { gsap } from "gsap";
 
-import { NAV_ANIMATION } from "@/constant/animation/navigation";
-import { NAV_ITEMS } from "@/constant/menu";
+import { NAV_ANIMATION } from "@/constants/animation/navigation";
+import { NAV_ITEMS } from "@/constants/menu";
 
 import { useAnimationState } from "@/store/animation";
 
-import { addAnimation } from "@/utils/animation/addAnimationToTimeline";
+import { addAnimation } from "@/utils/animation";
 
-import { NavigationItem } from "@/components/navigationItem";
-import { ThemeToggle } from "@/components/theme/ThemeToggle.tsx";
+import { NavigationItem } from "@/components/NavigationItem";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button.tsx";
 
 export const Navigation = () => {
@@ -52,7 +52,7 @@ export const Navigation = () => {
 	};
 
 	return (
-		<div className="w-full relative z-50">
+		<header className="w-full relative z-50">
 			<nav className="flex flex-row justify-between p-8">
 				<a className="flex justify-center items-center text-xl font-bold sm:text-3xl" href="/">
 					AUDI P.M.
@@ -69,7 +69,7 @@ export const Navigation = () => {
 					</Button>
 				</div>
 			</nav>
-			<div
+			<nav
 				ref={menuRef}
 				className="hidden w-full absolute top-[104px] z-50 bg-primary-foreground"
 			>
@@ -85,7 +85,7 @@ export const Navigation = () => {
 						/>
 					))}
 				</ul>
-			</div>
-		</div>
+			</nav>
+		</header>
 	);
 };

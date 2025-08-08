@@ -11,3 +11,4 @@ export function remarkReadingTime() {
     data.astro.frontmatter.minutesRead = readingTime.text;
   };
 }
+	
